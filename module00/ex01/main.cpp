@@ -9,8 +9,12 @@ std::string upperCase(std::string str) {
 
 int	main(void) {
 	std::string userInput;
-	std::string name;
+	std::string firstName;
+	std::string lastName;
+	std::string nickname;
 	std::string phoneNumber;
+	std::string darkestSecret;
+	std::string choice;
 	PhoneBook phoneBook;
 
 	while (true) {
@@ -18,16 +22,28 @@ int	main(void) {
 		if (!(std::cin >> userInput)) break;
 		userInput = upperCase(userInput);
 		if (userInput == "ADD") {
-			std::cout << "Enter the name: ";
-			if (!(std::cin >> name)) break;
-			std::cout << "Enter the phone number: ";
-			if (!(std::cin >> phoneNumber)) break;
-			phoneBook.PhoneBook::addContact(name, phoneNumber);
+			std::cout << "First Name: ";
+			if (!(std::cin >> firstName)) return (1);
+			std::cout << "Last Name: ";
+			if (!(std::cin >> lastName)) return (1);
+			std::cout << "Nickname: ";
+			if (!(std::cin >> nickname)) return (1);
+			std::cout << "Phone Number: ";
+			if (!(std::cin >> phoneNumber)) return (1);
+			std::cout << "Darkest secret: ";
+			if (!(std::cin >> darkestSecret)) return (1);
+			phoneBook.addContact(
+				firstName,
+				lastName,
+				nickname,
+				phoneNumber,
+				darkestSecret
+			);
 		}
 		else if (userInput == "SEARCH") {
-			std::cout << "Enter the name: ";
-			if (!(std::cin >> name)) break;
-			phoneBook.PhoneBook::findContact(name);
+			phoneBook.PhoneBook::listContacts();
+			std::cout << "Choose one: ";
+			if (!(std::cin >> choice)) break;
 		}
 		else if (userInput == "EXIT")
 			break ;

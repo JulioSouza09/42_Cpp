@@ -4,20 +4,17 @@ PhoneBook::PhoneBook() {
 	this->index = 0;
 }
 
-void PhoneBook::addContact(std::string name, std::string phoneNumber) {
-	this->contacts[index % MAX_CONTACTS].name = name;
-	this->contacts[index % MAX_CONTACTS].phoneNumber = phoneNumber;
+void PhoneBook::addContact(Contact contact) {
+	this->contacts[this->index % MAX_CONTACTS] = contact;
 	this->index++;
 }
 
-void PhoneBook::findContact(std::string name) {
-	for (int i = 0; i < MAX_CONTACTS; i++)
-	{
-		if (name == this->contacts[i].name) {
-			std::cout << "Contact found!\n";
-			contacts[i].Contact::printContact();
-			return ;
-		}
+void PhoneBook::listContacts(void) {
+	for (int i = 0; i < MAX_CONTACTS; i++) {
+		contacts[i].printContactColumn(i);
 	}
-	std::cout << "Contact not found :(\n";
+}
+
+void PhoneBook::printContact(int index) {
+	contacts[index].printContact();
 }

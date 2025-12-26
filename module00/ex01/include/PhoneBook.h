@@ -13,8 +13,9 @@ private:
 	int		index;
 public:
 	PhoneBook();
-	void addContact(std::string name, std::string phoneNumber);
-	void findContact(std::string name);
+	void addContact(Contact contact);
+	void listContacts(void);
+	void printContact(int index);
 };
 
 #endif
