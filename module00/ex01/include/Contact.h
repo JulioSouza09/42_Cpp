@@ -20,6 +20,7 @@ public:
 	);
 	void printContact(void);
 	void printContactColumn(int index);
+	std::string truncateContact(std::string str);
 };
 
 #endif

@@ -1,3 +1,4 @@
+#include <iomanip>
 #include "include/Contact.h"
 
 Contact::Contact(std::string firstName, std::string lastName,
@@ -18,9 +19,16 @@ void Contact::printContact(void) {
 }
 
 void Contact::printContactColumn(int index) {
-	std::cout << index << " | ";
-	std::cout << this->firstName << "| ";
-	std::cout << this->lastName << "| ";
-	std::cout << this->nickname << "| ";
-	std::cout << this->phoneNumber << std::endl; 
+	std::cout << std::right;
+	std::cout << std::setw(10) << index << "|";
+	std::cout << std::setw(10) << truncateContact(this->firstName) << "|";
+	std::cout << std::setw(10) << truncateContact(this->lastName) << "|";
+	std::cout << std::setw(10) << truncateContact(this->nickname) << "|";
+	std::cout << std::setw(10) << truncateContact(this->phoneNumber) << std::endl; 
+}
+
+std::string Contact::truncateContact(std::string str) {
+	if (str.length() <= 10)
+		return (str);
+	return (str.substr(0, 9) + ".");
 }

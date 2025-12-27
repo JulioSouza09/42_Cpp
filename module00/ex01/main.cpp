@@ -36,24 +36,28 @@ Contact *promptContact() {
 
 int	main(void) {
 	std::string userInput;
-	std::string choice;
+	int choice;
 	Contact *contact;
 	PhoneBook phoneBook;
 
 	while (true) {
 		std::cout << "Enter your command: ";
 		if (!(std::cin >> userInput)) break;
-		userInput = upperCase(userInput);
+		//userInput = upperCase(userInput);
 		if (userInput == "ADD") {
 			contact = promptContact();
 			if (contact == NULL)
 				return (1);
-			phoneBook.addContact(*contact);
+			phoneBook.addContact(contact);
 		}
 		else if (userInput == "SEARCH") {
 			phoneBook.PhoneBook::listContacts();
 			std::cout << "Choose one: ";
-			if (!(std::cin >> choice)) break;
+			if (!(std::cin >> choice)) {
+				std::cout << "Invalid input" << std::endl;
+				break;
+			}
+			phoneBook.printContact(choice);
 		}
 		else if (userInput == "EXIT")
 			break ;

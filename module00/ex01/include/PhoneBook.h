@@ -13,7 +13,8 @@ private:
 	int		index;
 public:
 	PhoneBook();
-	void addContact(Contact contact);
+	~PhoneBook();
+	void addContact(Contact *contact);
 	void listContacts(void);
 	void printContact(int index);
 };
