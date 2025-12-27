@@ -4,7 +4,7 @@ PhoneBook::PhoneBook() {
 	this->index = 0;
 }
 
-void PhoneBook::addContact(Contact contact) {
+void PhoneBook::addContact(Contact *contact) {
 	this->contacts[this->index % MAX_CONTACTS] = contact;
 	this->index++;
 }

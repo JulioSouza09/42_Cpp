@@ -1,5 +1,15 @@
 #include "include/Contact.h"
 
+Contact::Contact(std::string firstName, std::string lastName,
+				 std::string nickname, std::string phoneNumber,
+				 std::string darkestSecret) {
+	this->firstName = firstName;
+	this->lastName = lastName;
+	this->nickname = nickname;
+	this->phoneNumber = phoneNumber;
+	this->darkestSecret = darkestSecret;
+}
+
 void Contact::printContact(void) {
 	std::cout << this->firstName << std::endl;
 	std::cout << this->lastName << std::endl;

@@ -11,6 +11,13 @@ private:
 	std::string phoneNumber;	
 	std::string darkestSecret;	
 public:
+	Contact(
+		std::string firstName,
+		std::string lastName,
+		std::string nickname,
+		std::string phoneNumber,
+		std::string darkestSecret
+	);
 	void printContact(void);
 	void printContactColumn(int index);
 };

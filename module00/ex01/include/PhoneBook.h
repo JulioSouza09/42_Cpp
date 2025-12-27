@@ -9,7 +9,7 @@
 
 class PhoneBook {
 private:
-	Contact contacts[MAX_CONTACTS];	
+	Contact *contacts[MAX_CONTACTS];	
 	int		index;
 public:
 	PhoneBook();
