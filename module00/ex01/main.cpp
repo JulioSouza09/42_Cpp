@@ -15,15 +15,15 @@ Contact *promptContact() {
 	std::string darkestSecret;
 
 	std::cout << "First Name: ";
-	if (!(std::cin >> firstName)) return (NULL);
+	if (!std::getline(std::cin, firstName)) return (NULL);
 	std::cout << "Last Name: ";
-	if (!(std::cin >> lastName)) return (NULL);
+	if (!std::getline(std::cin, lastName)) return (NULL);
 	std::cout << "Nickname: ";
-	if (!(std::cin >> nickname)) return (NULL);
+	if (!std::getline(std::cin, nickname)) return (NULL);
 	std::cout << "Phone Number: ";
-	if (!(std::cin >> phoneNumber)) return (NULL);
+	if (!std::getline(std::cin, phoneNumber)) return (NULL);
 	std::cout << "Darkest secret: ";
-	if (!(std::cin >> darkestSecret)) return (NULL);
+	if (!std::getline(std::cin, darkestSecret)) return (NULL);
 	return (new Contact(
 			firstName,
 			lastName,
@@ -42,7 +42,7 @@ int	main(void) {
 
 	while (true) {
 		std::cout << "Enter your command: ";
-		if (!(std::cin >> userInput)) break;
+		if (!std::getline(std::cin, userInput)) break;
 		//userInput = upperCase(userInput);
 		if (userInput == "ADD") {
 			contact = promptContact();
@@ -57,6 +57,7 @@ int	main(void) {
 				std::cout << "Invalid input" << std::endl;
 				break;
 			}
+			std::cin.ignore(10000, '\n');
 			phoneBook.printContact(choice);
 		}
 		else if (userInput == "EXIT")

@@ -12,10 +12,11 @@ Contact::Contact(std::string firstName, std::string lastName,
 }
 
 void Contact::printContact(void) {
-	std::cout << this->firstName << std::endl;
-	std::cout << this->lastName << std::endl;
-	std::cout << this->nickname << std::endl;
-	std::cout << this->phoneNumber << std::endl; 
+	std::cout << "First Name: " << this->firstName << std::endl;
+	std::cout << "Last Name: " << this->lastName << std::endl;
+	std::cout << "Nickname: " << this->nickname << std::endl;
+	std::cout << "Phone Number: " << this->phoneNumber << std::endl; 
+	std::cout << "Darkest Secret: " << this->darkestSecret << std::endl; 
 }
 
 void Contact::printContactColumn(int index) {
