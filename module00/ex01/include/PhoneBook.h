@@ -9,12 +9,13 @@
 
 class PhoneBook {
 private:
-	Contact *contacts[MAX_CONTACTS];	
+	Contact contacts[MAX_CONTACTS];	
 	int		index;
+	int		contactCount;
 public:
 	PhoneBook();
 	~PhoneBook();
-	void addContact(Contact *contact);
+	void addContact(Contact contact);
 	void listContacts(void);
 	void printContact(int index);
 };

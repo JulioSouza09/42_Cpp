@@ -1,7 +1,7 @@
 #include <iomanip>
 #include "include/Contact.h"
 
-Contact::Contact(std::string firstName, std::string lastName,
+void Contact::setContact(std::string firstName, std::string lastName,
 				 std::string nickname, std::string phoneNumber,
 				 std::string darkestSecret) {
 	this->firstName = firstName;
