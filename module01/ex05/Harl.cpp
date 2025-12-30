@@ -7,7 +7,7 @@ void Harl::debug(void) {
 }
 
 void Harl::info(void) {
-	std::cout << "I cannot believe adding extra bacon costs more money ";
+	std::cout << "I cannot believe adding extra bacon costs more money. ";
 	std::cout << "You didn’t put enough bacon in my burger! ";
 	std::cout << "If you did, I wouldn’t be asking for more!" << std::endl;
 }
