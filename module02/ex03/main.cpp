@@ -49,11 +49,13 @@ int main()
     std::cout << "--- Tests Complete ---" << std::endl; */
 
     Point a(0, 0);
-    Point b(10, 30);
-    Point c(20, 0);
-    Point p(10, 15);
+    Point b(4, 7);
+    Point c(8, 1);
+    Point p(-1, 5);
     if (bsp(a, b, c, p))
         std::cout << "Inside\n";
+    else
+        std::cout << "Outside" << std::endl;
 
     return 0;
 }

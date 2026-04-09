@@ -25,4 +25,6 @@ class Point
 		Point operator-(const Point& point) const;
 };
 
+std::ostream& operator<<(std::ostream& os, const Point& point);
+
 #endif

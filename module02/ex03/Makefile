@@ -1,11 +1,11 @@
 CC 			:= c++
-CPPFLAGS 	:= -Wall -Wextra -Werror -std=c++98
+CPPFLAGS 	:= -Wall -Wextra -Werror -std=c++98 -g
 ODIR 		:= obj
 SRC 		:= main.cpp \
 			   Fixed.cpp \
 			   Point.cpp \
 			   bsp.cpp
-NAME 		:= FixedPoint
+NAME 		:= bsp
 OBJ 		:= $(patsubst %.cpp, $(ODIR)/%.o, $(SRC))
 
 all: $(NAME)

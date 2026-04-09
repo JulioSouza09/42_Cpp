@@ -41,3 +41,9 @@ Fixed Point::abs(const Fixed& number) const
 {
     return number >= 0 ? number : number * -1;
 }
+
+std::ostream& operator<<(std::ostream& os, const Point& point)
+{
+    os << "Point(" << point.getX() << ", " << point.getY() << ")";
+    return os;
+}
