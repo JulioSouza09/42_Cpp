@@ -8,8 +8,6 @@ class Point
 	private:
 		const Fixed _x;
 		const Fixed _y;
-
-		Fixed abs(const Fixed& number) const;
 	
 	public:
 		Point();

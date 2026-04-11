@@ -34,12 +34,7 @@ const Fixed& Point::getY() const
 
 Fixed Point::cross(const Point& number) const
 {
-    return this->abs(this->_x * number.getY() - this->_y * number.getX());
-}
-
-Fixed Point::abs(const Fixed& number) const
-{
-    return number >= 0 ? number : number * -1;
+    return this->_x * number.getY() - this->_y * number.getX();
 }
 
 std::ostream& operator<<(std::ostream& os, const Point& point)
