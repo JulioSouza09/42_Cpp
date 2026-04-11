@@ -49,13 +49,14 @@ int main()
     std::cout << "--- Tests Complete ---" << std::endl; */
 
     Point a(0, 0);
-    Point b(4, 7);
-    Point c(8, 1);
-    Point p(-1, 5);
-    if (bsp(a, b, c, p))
-        std::cout << "Inside\n";
-    else
-        std::cout << "Outside" << std::endl;
+    Point b(1, 2.2f);
+    Point c(2.4f, 1);
+
+    run_test("Outside  with y = min fixed", a, b, c, Point(0, 0.00390625f), false);
+    run_test("Inside with y and x = min fixed", a, b, c, Point(0.00390625f, 0.00390625f), true);
+    run_test("Outsidee with x = min fixed", a, b, c, Point(0.00390625f, 0), false);
+    run_test("Clearly inside", a, b, c, Point(1.2f, 1), true);
+    run_test("Clearly outside", a, b, c, Point(1.2f, -1), false);
 
     return 0;
 }
