@@ -116,7 +116,7 @@ Fixed Fixed::operator/(const Fixed &number) const
     Fixed result;
     long long scaled;
 
-    scaled = (long long)(this->_fixed << fractionalBits);
+    scaled = ((long long)this->_fixed << fractionalBits);
     result.setRawBits((int)(scaled / number.getRawBits()));
     return result;
 }
