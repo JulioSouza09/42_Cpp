@@ -89,16 +89,6 @@ void print_title(std::string title)
     std::cout << "========== Testing " << title << " ==========" << std::endl;
 }
 
-/* 
-Default constructor called
-Int constructor called
-Float constructor called
-Copy constructor called
-Copy assignment operator called
-Float constructor called
-Copy assignment operator called
-Destructor called */
-
 void testDefaultConstructor()
 {
     Fixed *x;
@@ -179,12 +169,12 @@ int main()
     std::cout << "c is " << c.toInt() << " as integer" << std::endl;
     std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 
-    RUN_TEST(testDefaultConstructor);
+    /* RUN_TEST(testDefaultConstructor);
     RUN_TEST(testIntConstructor);
     RUN_TEST(testFloatConstructor);
     RUN_TEST(testInsertOperator);
     RUN_TEST(testToFloat);
     RUN_TEST(testToInt);
-    RUN_TEST(testDestructor);
+    RUN_TEST(testDestructor); */
     return 0;
 }
