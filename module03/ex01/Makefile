@@ -2,8 +2,9 @@ CC 			:= c++
 CPPFLAGS 	:= -Wall -Wextra -Werror -std=c++98
 ODIR 		:= obj
 SRC 		:= main.cpp \
-			   Fixed.cpp
-NAME 		:= FixedPoint
+			   ClapTrap.cpp \
+			   ScavTrap.cpp
+NAME 		:= serenaMyLove
 OBJ 		:= $(patsubst %.cpp, $(ODIR)/%.o, $(SRC))
 
 all: $(NAME)
