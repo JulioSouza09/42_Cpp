@@ -18,7 +18,6 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy){
     std::cout << "New ScavTrap instance copy of '" << copy.name << "'." << std::endl;
-	*this = copy;	
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap &copy) {
